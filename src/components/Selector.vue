@@ -9,14 +9,18 @@
             <router-link to="/guide/Windows" class="router">
 
                     <img src="../assets/png/windows.png">
+                    <span>
                     Windows
+                    </span>
             </router-link>
                             </li>
                                         <li>
             <router-link to="/guide/iPhone" class="router">
 
                 <img src="../assets/png/apple.png">
+                <span>
                 iPhone
+                </span>
 
             </router-link>
                         </li>
@@ -24,7 +28,9 @@
                         <router-link to="/guide/Android" class="router">
 
                 <img src="../assets/png/Android.png">
+                <span>
                 Android
+                </span>
 
                         </router-link>
                                     </li>
@@ -49,8 +55,8 @@
         
     }
     img{
-        height: 5vw;
-        width: 5vw;
+        height: 4vw;
+        width: 4vw;
     }
     .router:hover{
         color: gray;
@@ -63,7 +69,6 @@
         font-size: 5vw;
     }
     ul{
-        flex-wrap: nowrap;
         flex-direction: row;
         display: -webkit-flex; /* Safari */
         display: flex;
