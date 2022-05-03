@@ -2,28 +2,29 @@
   <div class="container">
     <MainBody />
     <Selector />
-    <Footer/>
+    <Footer />
   </div>
 </template>
 
 <script>
-import MainBody from './MainBody.vue'
-import Selector from './Selector.vue'
-import Footer from './Footer.vue'
+import MainBody from "./MainBody.vue";
+import Selector from "./Selector.vue";
+import Footer from "./Footer.vue";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
     MainBody,
     Selector,
-    Footer
-  }
-}
+    Footer,
+  },
+};
 </script>
 
 <style>
 #app {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: black;

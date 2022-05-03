@@ -7,6 +7,10 @@
         <span>
             私人线路，所以<span style="color:grey;">最快</span>
         </span>
+        <div class="d-grid gap-2 mb-4 mt-2">
+                <router-link to="/login" class="btn btn-dark">请先<span style="color: white;">登录</span></router-link>
+        </div>
+
     </div>
 
 </div>
@@ -27,6 +31,5 @@ export default {
     #body{
         display: flex;
         flex-direction: column;
-        height: 50%;
     }
 </style>
