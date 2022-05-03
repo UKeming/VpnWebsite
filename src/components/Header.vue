@@ -19,7 +19,7 @@ export default{
 
 <style scoped>
 #title{
-    font-size: 5vw;
+    font-size: 7vw;
     padding: 2%;
     font-family: 'Trebuchet MS', sans-serif;
 }
@@ -31,7 +31,7 @@ div{
     background-color: #313132;
     padding: 1%;
     color: #ececec;
-    font-size: 1vw;
+    font-size: 3vw;
     letter-spacing: 10px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-style: normal;

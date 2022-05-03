@@ -59,12 +59,10 @@
     li{
         cursor: pointer;
         list-style: none;
-        width: 33%;
+        width: 31%;
         font-size: 5vw;
     }
     ul{
-        flex-shrink: 3;
-        display: inline-block;
         flex-wrap: nowrap;
         flex-direction: row;
         display: -webkit-flex; /* Safari */
@@ -73,8 +71,5 @@
     #container{
         margin-top: 50px;
         background-color: whitesmoke;
-    }
-    div{
-        padding: 5px;
     }
 </style>
