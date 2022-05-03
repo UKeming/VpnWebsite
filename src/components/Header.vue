@@ -19,8 +19,8 @@ export default{
 
 <style scoped>
 #title{
-    font-size: 40px;
-    padding: 20px;
+    font-size: 5vw;
+    padding: 2%;
     font-family: 'Trebuchet MS', sans-serif;
 }
 #float{
@@ -29,9 +29,9 @@ export default{
 
 div{
     background-color: #313132;
-    padding: 10px;
+    padding: 1%;
     color: #ececec;
-    font-size: 15px;
+    font-size: 1vw;
     letter-spacing: 10px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-style: normal;
@@ -41,5 +41,6 @@ div{
     align-self: center;
     background-color: white;
     text-align: center;
+    height: 20%;
  }
 </style>

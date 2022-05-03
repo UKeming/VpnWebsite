@@ -1,17 +1,22 @@
 <template>
   <div class="container">
-    <Header title="Keming VPN"/>
-    <router-view></router-view>
+    <MainBody />
+    <Selector />
+    <Footer/>
   </div>
 </template>
 
 <script>
-import Header from './components/Header.vue'
+import MainBody from './MainBody.vue'
+import Selector from './Selector.vue'
+import Footer from './Footer.vue'
 
 export default {
-  name: 'App',
+  name: 'Home',
   components: {
-    Header,
+    MainBody,
+    Selector,
+    Footer
   }
 }
 </script>

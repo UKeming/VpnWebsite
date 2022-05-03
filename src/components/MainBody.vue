@@ -1,4 +1,5 @@
 <template>
+<div id="body">
 <div>
     <img src="../assets/logo.png" alt="">
 </div>
@@ -7,6 +8,8 @@
             私人线路，所以<span style="color:grey;">最快</span>
         </span>
     </div>
+
+</div>
 </template>
 <script>
 
@@ -16,11 +19,14 @@ export default {
 </script>
 <style scoped>
     img{
-    margin-bottom: -280px;
-    margin-top: -100px;
+        height: 50vw;
     }
     #text-block {
-        padding-top: 10%;
-        font-size: 100px;
+        font-size: 5vw;
+    }
+    #body{
+        display: flex;
+        flex-direction: column;
+        height: 50%;
     }
 </style>
