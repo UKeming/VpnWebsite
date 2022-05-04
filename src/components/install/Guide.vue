@@ -22,15 +22,5 @@ export default{
 }
 </script>
 <style scoped>
-    .button:hover{
-        color: white;
-        transition: 0.3s ease-in-out;
-    }
-    .button{
-        text-decoration: none;
-        background-color: whitesmoke;
-        padding: 2vw;
-        border-radius: 1vw;
-        color: grey;
-    }
+
 </style>
