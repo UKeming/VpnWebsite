@@ -59,7 +59,7 @@ export default {
         body: JSON.stringify(this.user),
         
       };
-    axios.post("http://localhost:9001/user/login",this.user,{
+    axios.post("http://143.198.65.33:9001/user/login",this.user,{
           withCredentials:true
       }).then((response) => response.json())
         .then((data) => {

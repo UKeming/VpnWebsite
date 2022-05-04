@@ -1,5 +1,8 @@
+import axios from 'axios'
 function checkAuth(){
-    fetch("http://localhost:9001/user/login-status",{method:"POST",credentials:"include"})
+    axios.get("http://143.198.65.33:9001/user/login-status",{
+        withCredentials:true,
+    })
   .then((response) => response.json())
   .then((data) => {
     if (data.code == 200) {
