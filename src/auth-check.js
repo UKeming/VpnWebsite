@@ -1,5 +1,5 @@
 function checkAuth(){
-    fetch("http://143.198.65.33:9001/user/login-status",{method:"POST"})
+    fetch("http://localhost:9001/user/login-status",{method:"POST",credentials:"include"})
   .then((response) => response.json())
   .then((data) => {
     if (data.code == 200) {
