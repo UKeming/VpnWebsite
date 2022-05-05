@@ -1,15 +1,13 @@
-import axios from 'axios'
+import axios from "axios";
+import { domain } from "./domain";
 
-
-function checkAuth(){
-   
-    axios.get("http://localhost:80/api/login-status")
-  .then((data) => {
-    if (data.code == 200) {
-        return data.data.login;
-    } else {
-      alert("无法连接到服务器");
-    }
-  });
+function checkAuth() {
+  let login = axios
+    .get("http://" + domain + ":80/api/login-status")
+    .then((response) => {
+      let data = response.data;
+      return data.data;
+    });
+  return login;
 }
 export default checkAuth;

@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <MainBody />
-    <Selector />
+    <MainBody :login="this.login" :username="this.username"/>
+    <Selector v-if="login" />
     <Footer />
   </div>
 </template>
@@ -10,13 +10,33 @@
 import MainBody from "./MainBody.vue";
 import Selector from "./Selector.vue";
 import Footer from "./Footer.vue";
-
+import checkAuth from "../auth-check.js";
 export default {
   name: "Home",
+  data() {
+    return {
+      login: false,
+      username: "",
+    };
+  },
   components: {
     MainBody,
     Selector,
     Footer,
+  },
+  methods: {
+    checkAuthAndSetView() {
+      checkAuth().then((data) => {
+        console.log(data)
+        if (data != null) {
+          this.login = true;
+          this.username = data.username;
+        }
+      });
+    },
+  },
+  beforeMount() {
+    this.checkAuthAndSetView();
   },
 };
 </script>

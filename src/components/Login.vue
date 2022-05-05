@@ -37,6 +37,8 @@
 </template>
 <script>
 import axios from "axios";
+import {domain} from "../domain";
+
 axios.defaults.withCredentials = true;
 export default {
   name: "Login",
@@ -50,42 +52,14 @@ export default {
   },
 
   methods: {
-    testCoockies() {
-      var enabled = false;
-      // Quick test if browser has cookieEnabled host property
-      if (navigator.cookieEnabled) {
-        enabled = true;
-      }
-      // Create cookie test
-      document.cookie = "testcookie=1";
-      enabled = document.cookie.indexOf("testcookie=") != -1;
-      // Delete cookie test
-      document.cookie = "testcookie=1; expires=Thu, 01-Jan-1970 00:00:01 GMT";
-      return enabled;
-    },
     login() {
-      document.cookie="samesite=none;"
-      const requestOptions = {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(this.user),
-      };
-      if (!this.testCoockies()) {
-        alert("未开启第三方cookie，可能导致登录不成功");
-      }
-
-      axios
-        .post("http://localhost:80/api/login", this.user)
-        .then((data) => {
-          if (data.data.code == 200) {
-            this.$cookies.set("username", data.data.data.username);
-            this.$router.push("/");
-          } else {
-            alert("登陆失败，请检查用户名和密码是否正确");
-          }
-        });
+      axios.post(`http://${domain}:80/api/login`, this.user).then((data) => {
+        if (data.data.code == 200) {
+          this.$router.push("/");
+        } else {
+          alert("登陆失败，请检查用户名和密码是否正确");
+        }
+      });
     },
   },
 };

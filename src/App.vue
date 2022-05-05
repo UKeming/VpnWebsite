@@ -18,12 +18,14 @@ export default {
 
 <style>
 #app {
+  position: absolute;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: black;
   height: 100%;
+  width: 100%;
 }
 .button:hover {
   color: white;
@@ -36,5 +38,8 @@ export default {
   display: inline-block;
   border-radius: 1vw;
   color: grey;
+}
+body{
+    margin: 0;
 }
 </style>
