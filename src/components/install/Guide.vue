@@ -1,16 +1,18 @@
 <template>
-  <div v-if="login" id="guide" class="block">
-    <Header />
-    <div v-if="$route.params.id == 'Windows'">
-      <Windows />
+  <div v-if="checked">
+    <div v-if="login" id="guide" class="block">
+      <Header />
+      <div v-if="$route.params.id == 'Windows'">
+        <Windows />
+      </div>
+      <div v-if="$route.params.id == 'iPhone'">
+        <iPhone />
+      </div>
     </div>
-    <div v-if="$route.params.id == 'iPhone'">
-      <iPhone />
+    <div v-if="!login" class="block">未登录用户无权查看本页面</div>
+    <div class="d-grid gap-2 d-md-block block">
+      <router-link to="/" class="btn btn-light"> 返回 </router-link>
     </div>
-  </div>
-  <div v-if="!login" class="block">未登录用户无权查看本页面</div>
-  <div class="d-grid gap-2 d-md-block block">
-    <router-link to="/" class="btn btn-light"> 返回 </router-link>
   </div>
 </template>
 
@@ -30,12 +32,14 @@ export default {
   data() {
     return {
       login: false,
+      checked: false,
     };
   },
   methods: {
     checkAuthAndSetView() {
       checkAuth().then((login) => {
         this.login = login;
+        this.checked = true;
       });
     },
   },
@@ -58,7 +62,7 @@ export default {
   font-size: 3vw;
 }
 
-.block{
-    margin: 20px;
+.block {
+  margin: 20px;
 }
 </style>
